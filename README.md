@@ -1,6 +1,12 @@
-# MSFT_DevDiv_GAT_Data
+# Microsoft DevDiv Growth and Analytics Teram
 
 This repository contains data dumps from the Stack Overflow Developer Survey for 2019-2021. 
+
+Each year contains a CSV file using the following schema:
+
+UserID | QuestionRef | Answer
+
+Additionally, there is a "QuestionKey" which lists unique QuestionRefs, and whether or not they are present in a given year. This is based on the raw data from Stack Overflow, and as such there may be unique columns that answer the same questions (For examplel, DatabaseUsed vs UsedDatabase)
 
 The data is currently in a "long" format, where each row is a response to a question. Respondents have been assigned an ID which is consistent across a single year, but not across years (e.g., All ResponseIds of 23 are for the same respondent for 2021, but this is not the same "person" as ResponseId 23 in 2020).
 
